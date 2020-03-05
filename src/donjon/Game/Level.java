@@ -264,7 +264,7 @@ public class Level {
     }
 
     public double getGravity() {
-        return gravity;
+        return GRAVITY;
     }
 
     public Player getPlayer() {
