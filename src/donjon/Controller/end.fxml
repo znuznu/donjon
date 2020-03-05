@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="720.0" style="-fx-background-color: black;" styleClass="bcd-settings" stylesheets="@../../Resources/stylesheet.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="donjon.Controller.EndController">
+   <center>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label styleClass="subTitle" text="Congratulations !" />
+            <HBox alignment="CENTER" maxWidth="310.0">
+               <children>
+                  <ImageView fx:id="idDeathCounterImageView" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="idDeathCounterLabel" styleClass="standard" text="x 0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="310.0">
+               <children>
+                  <ImageView fx:id="idTotalCoinsImageView" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="idTotalCoinsLabel" styleClass="standard" text="x 0" />
+               </children>
+            </HBox>
+            <Button alignment="CENTER" onMouseClicked="#clickReturn" onMouseEntered="#clickSoundHover" onMouseReleased="#clickSound" mnemonicParsing="false" styleClass="button-standard" text="Back to menu">
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

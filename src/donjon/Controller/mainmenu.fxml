@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="bcd-logo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="720.0" stylesheets="@../../Resources/stylesheet.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="donjon.Controller.MainMenuController">
+   <bottom>
+      <GridPane prefHeight="400.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+                <Button mnemonicParsing="false" onMouseClicked="#clickStart" onMouseEntered="#clickSoundHover" onMouseReleased="#clickSound" styleClass="button-big" text="Start" GridPane.halignment="CENTER" />
+                <Button mnemonicParsing="false" onMouseClicked="#clickSettings" onMouseEntered="#clickSoundHover" onMouseReleased="#clickSound" styleClass="button-big" text="Settings" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Button mnemonicParsing="false" onMouseClicked="#clickQuit" onMouseEntered="#clickSoundHover" onMouseReleased="#clickSound" styleClass="button-big" text="Quit" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="40.0" right="40.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </bottom>
+</BorderPane>

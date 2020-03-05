@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Bitty';
+    src: url('Fonts/Bitty.ttf');
+}
+
+@font-face {
+    font-family: 'Harmonic';
+    src: url('Fonts/Harmonic.ttf');
+}
+
+#bcd-logo {
+    -fx-background-image: url("Background/menu.png");
+}
+
+.button-big {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-text-alignment: left;
+    -fx-font-family: "Harmonic";
+    -fx-font-size: 80;
+    -fx-text-fill: white;
+    -fx-padding: 0;
+}
+
+.button-standard {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-text-alignment: left;
+    -fx-font-family: "Harmonic";
+    -fx-font-size: 48;
+    -fx-text-fill: white;
+    -fx-padding: 0;
+}
+
+.button-little {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-text-alignment: left;
+    -fx-font-family: "Harmonic";
+    -fx-font-size: 32;
+    -fx-text-fill: white;
+    -fx-padding: 0;
+}
+
+.button:hover {
+    -fx-cursor: hand;
+    -fx-text-fill: darkgray;
+}
+
+.level-text {
+    -fx-font-family: "Harmonic";
+    -fx-font-size: 32;
+    -fx-text-fill: white;
+}
+
+.standard {
+    -fx-font-family: "Bitty";
+    -fx-font-size: 48;
+    -fx-text-fill: white;
+}
+
+.standard-success {
+    -fx-font-family: "Bitty";
+    -fx-font-size: 48;
+    -fx-text-fill: lightgreen;
+}
+
+.standard-fail {
+    -fx-font-family: "Bitty";
+    -fx-font-size: 48;
+    -fx-text-fill: lightcoral;
+}
+
+.standard-select {
+    -fx-font-family: "Bitty";
+    -fx-font-size: 48;
+    -fx-text-fill: darkgrey;
+}
+
+.title {
+    -fx-font-family: "Harmonic";
+    -fx-font-size: 64;
+    -fx-text-fill: white;
+}
+
+.subTitle {
+    -fx-font-family: "Harmonic";
+    -fx-font-size: 48;
+    -fx-text-fill: white;
+}
+
+.selection {
+    -fx-cursor: hand;
+}

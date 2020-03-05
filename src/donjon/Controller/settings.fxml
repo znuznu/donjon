@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="684.0" prefWidth="720.0" style="-fx-background-color: black;" styleClass="bcd-settings" stylesheets="@../../Resources/stylesheet.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="donjon.Controller.SettingsController">
+
+    <center>
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="400.0" spacing="10.0" styleClass="standard-success" BorderPane.alignment="CENTER">
+            <children>
+                <Label styleClass="title" text="Settings">
+                </Label>
+                <Label styleClass="subTitle" text="Control" />
+                <GridPane alignment="CENTER" maxWidth="-Infinity" vgap="5.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="125.0" />
+                        <ColumnConstraints />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="100.0" />
+                        <ColumnConstraints />
+                    </columnConstraints>
+
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+
+                    <Label styleClass="standard" text="Left" />
+                    <Label styleClass="standard" text="Right" GridPane.rowIndex="1" />
+                    <Label styleClass="standard" text="Jump" GridPane.rowIndex="2" />
+                    <Label styleClass="standard" text="Interact" GridPane.rowIndex="3" />
+                    <Label fx:id="leftLabel" maxWidth="-Infinity" onMouseClicked="#clickKey" style="-fx-cursor: hand;" styleClass="standard" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                    <Label fx:id="rightLabel" maxWidth="-Infinity" onMouseClicked="#clickKey" style="-fx-cursor: hand;" styleClass="standard" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    <Label fx:id="jumpLabel" maxWidth="-Infinity" onMouseClicked="#clickKey" style="-fx-cursor: hand;" styleClass="standard" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                    <Label fx:id="interactLabel" maxWidth="-Infinity" onMouseClicked="#clickKey" style="-fx-cursor: hand;" styleClass="standard" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                </GridPane>
+                <Button mnemonicParsing="false" onMouseClicked="#clickDefault" onMouseEntered="#clickSoundHover" onMouseReleased="#clickSound" styleClass="button-little" text="Default" />
+                <HBox alignment="CENTER" spacing="10.0" />
+                <Label fx:id="infosLabel" alignment="CENTER" />
+                <Button fx:id="buttonSave" mnemonicParsing="false" onMouseClicked="#clickSaveSettings" onMouseEntered="#clickSoundHover" onMouseReleased="#clickSound" styleClass="button-standard" text="Save" />
+                <Button mnemonicParsing="false" onMouseClicked="#clickReturn" onMouseEntered="#clickSoundHover" onMouseReleased="#clickSound" styleClass="button-standard" text="Return" />
+
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </VBox>
+    </center>
+
+</BorderPane>

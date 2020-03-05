@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="bcd-logo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="720.0" style="-fx-background-color: black;" stylesheets="@../../Resources/stylesheet.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="donjon.Controller.GameController">
+    <center>
+        <Pane id="pane-game" fx:id="gamePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" onKeyReleased="#keyReleased" prefHeight="576.0" prefWidth="720.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/10.0.2-internal" />
+    </center>
+    <top>
+        <GridPane fx:id="informationsPane" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="-Infinity" prefWidth="500.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="-Infinity" prefWidth="110.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="-Infinity" prefWidth="110.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <HBox fx:id="inventoryHbox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" />
+                <Label fx:id="framePerSecondLabel" alignment="CENTER_RIGHT" styleClass="standard" text="fps" GridPane.columnIndex="2" />
+                <Label fx:id="idLevelLabel" styleClass="standard" text="Level" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+    </top>
+   <bottom>
+      <HBox alignment="CENTER" maxHeight="0.0" prefHeight="0.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="textLabel" alignment="CENTER" maxHeight="100.0" styleClass="level-text" text="Default text." />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
