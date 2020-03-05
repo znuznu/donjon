@@ -17,7 +17,7 @@ import java.io.*;
 import java.util.HashMap;
 
 public class Level {
-    private final double gravity = 0.4;
+    private final double GRAVITY = 0.4;
 
     private int id;
     private HashMap<Entity, Index> entitiesMap;
