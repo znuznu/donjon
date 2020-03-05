@@ -7,15 +7,15 @@ import javafx.scene.image.WritableImage;
 public class SpriteManager {
     /* Blue */
     public static Image[][] BLUE = load("Characters/blue.png", 36, 36);
-    public static Image[] BLUE_IDLE_RIGHT = new Image[]{BLUE[0][0], BLUE[0][2]};
-    public static Image[] BLUE_IDLE_LEFT = new Image[]{BLUE[1][4], BLUE[1][2]};
-    public static Image[] BLUE_WALK_RIGHT = new Image[]{BLUE[0][0], BLUE[0][1], BLUE[0][0]};
-    public static Image[] BLUE_WALK_LEFT = new Image[]{BLUE[1][4], BLUE[1][3], BLUE[1][4]};
-    public static Image[] BLUE_JUMP_RIGHT = new Image[]{BLUE[0][1]};
-    public static Image[] BLUE_JUMP_LEFT = new Image[]{BLUE[1][3]};
-    public static Image[] BLUE_JUMP_NO_CHARGE_RIGHT = new Image[]{BLUE[2][3]};
-    public static Image[] BLUE_JUMP_NO_CHARGE_LEFT = new Image[]{BLUE[2][1]};
-    public static Image[] BLUE_DEATH = new Image[]{BLUE[1][0]};
+    public static Image[] BLUE_IDLE_RIGHT               = new Image[]{BLUE[0][0], BLUE[0][2]};
+    public static Image[] BLUE_IDLE_LEFT                = new Image[]{BLUE[1][4], BLUE[1][2]};
+    public static Image[] BLUE_WALK_RIGHT               = new Image[]{BLUE[0][0], BLUE[0][1], BLUE[0][0]};
+    public static Image[] BLUE_WALK_LEFT                = new Image[]{BLUE[1][4], BLUE[1][3], BLUE[1][4]};
+    public static Image[] BLUE_JUMP_RIGHT               = new Image[]{BLUE[0][1]};
+    public static Image[] BLUE_JUMP_LEFT                = new Image[]{BLUE[1][3]};
+    public static Image[] BLUE_JUMP_NO_CHARGE_RIGHT     = new Image[]{BLUE[2][3]};
+    public static Image[] BLUE_JUMP_NO_CHARGE_LEFT      = new Image[]{BLUE[2][1]};
+    public static Image[] BLUE_DEATH                    = new Image[]{BLUE[1][0]};
 
     /* Coin */
     public static Image[][] COIN = load("Items/coin.png", 36, 36);
@@ -44,7 +44,6 @@ public class SpriteManager {
 
     /* Return the Image based on imageFile */
     public static Image loadSimpleImage(String imageFile) {
-        //return new Image(new File("src/Resources/Sprites/" + imageFile).toURI().toString());
         return new Image(SpriteManager.class.getResourceAsStream("/Resources/Sprites/" + imageFile));
     }
 
@@ -52,7 +51,6 @@ public class SpriteManager {
         Image[][] croppedSpriteSheet;
 
         try {
-            //Image spritesheet = new Image(new File("src/Resources/Sprites/" + spriteSheet).toURI().toString());
             Image spritesheet = new Image(SpriteManager.class.getResourceAsStream("/Resources/Sprites/" + spriteSheet));
             int c = (int) spritesheet.getWidth() / spriteWidth;
             int r = (int) spritesheet.getHeight() / spriteHeight;
@@ -62,14 +60,20 @@ public class SpriteManager {
 
             for (int i = 0; i < r; i++) {
                 for (int j = 0; j < c; j++) {
-                    croppedSpriteSheet[i][j] = new WritableImage(pixelReader, j * spriteWidth, i * spriteHeight, spriteWidth, spriteHeight);
+                    croppedSpriteSheet[i][j] = new WritableImage(
+                            pixelReader,
+                            j * spriteWidth,
+                            i * spriteHeight,
+                            spriteWidth,
+                            spriteHeight
+                    );
                 }
             }
 
             return croppedSpriteSheet;
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("*** Error: can't load the spritesheet " + spriteSheet + " ***");
+            System.out.println("[E] Error: can't load the spritesheet " + spriteSheet);
         }
 
         return null;
