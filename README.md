@@ -6,10 +6,10 @@ The narrator can be a bit boring...
 #### Controls
 Keyboards control can be changed in game in the Settings menu.  
 The default ones:
-- Jump - Space
-- Left - Q
-- Right - D
-- Interact - E
+- Jump - `Space`
+- Left - `Q`
+- Right - `D`
+- Interact - `E`
 
 #### Special thanks
 [Monkopus](https://monkopus.itch.io/harmonic) for the Harmonic font  
