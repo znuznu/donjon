@@ -1,5 +1,5 @@
 # Donjon
-Donjon is a little and short platformer game made from scratch using JavaFX.  
+Donjon is a short platformer game made from scratch using JavaFX.  
 Move around with Blue, double jump and grab the soul from each level.  
 The narrator can be a bit boring...
 
